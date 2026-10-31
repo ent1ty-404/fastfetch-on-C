@@ -44,8 +44,8 @@ Uptime: 0 hours, 31 mins
 
 **1. Клонируйте репозиторий:**
 ```bash
-git clone https://github.com/ent1ty-404/fastfetch-on-C-v0.1.git
-cd fastfetch-on-C-v0.1
+git clone https://github.com/ent1ty-404/fastfetch-on-C-v0.2.git
+cd fastfetch-on-C-v0.2
 ```
 
 **2. Скомпилируйте исходный код:**
