@@ -7,7 +7,7 @@
 [![Language](https://img.shields.io/badge/Language-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey.svg)]()
 [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?logo=arch-linux&logoColor=white)]()
-[![Version](https://img.shields.io/badge/Version-v0.1-green.svg)]()
+[![Version](https://img.shields.io/badge/Version-v0.2-green.svg)]()
 
 </div>
 
