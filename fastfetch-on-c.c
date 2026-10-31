@@ -61,9 +61,39 @@ void distro() {
     }
     fclose(distroinfo); 
 }
+
+void uptime() {
+    FILE *uptimeinfo = fopen("/proc/uptime", "r");
+    if (uptimeinfo == NULL) {
+        printf("Ошибка: не удалось открыть uptimeinfo!\n");
+        return;
+    }
+
+    double uptime_seconds;
+  
+    if (fscanf(uptimeinfo, "%lf", &uptime_seconds) != 1) {
+        printf("Ошибка чтения uptime\n");
+        fclose(uptimeinfo);
+        return;
+    }
+    fclose(uptimeinfo);
+
+
+    int total_seconds = (int)uptime_seconds;
+    int days = total_seconds / 86400;             
+    int hours = (total_seconds % 86400) / 3600;   
+    int minutes = (total_seconds % 3600) / 60;   
+
+    if (days > 0) {
+        printf("Uptime: %d days, %d hours, %d mins\n", days, hours, minutes);
+    } else {
+        printf("Uptime: %d hours, %d mins\n", hours, minutes);
+    }
+}
 int main() {
     CPUF();
     ram();
     distro();
+    uptime();
     return 0;
 }
