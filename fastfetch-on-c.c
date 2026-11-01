@@ -89,10 +89,31 @@ void uptime() {
     } else {
         printf("Uptime: %d hours, %d mins\n", hours, minutes);
     }
+
 }
+
+
+void GPU() {
+    FILE *gpuinfo = popen("nvidia-smi --query-gpu=name --format=csv,noheader", "r");
+    
+    if (gpuinfo == NULL) {
+        printf("Ошибка: не удалось запустить nvidia-smi!\n");
+        return;
+    }
+
+    char buffer[256];
+    if (fgets(buffer, sizeof(buffer), gpuinfo) != NULL) {
+        buffer[strcspn(buffer, "\n")] = 0;
+        printf("GPU: %s\n", buffer);
+    }
+
+    pclose(gpuinfo);
+}
+
 int main() {
     CPUF();
     ram();
+    GPU();
     distro();
     uptime();
     return 0;
