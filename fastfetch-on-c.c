@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void CPUF() {
     FILE *cpuinfo = fopen("/proc/cpuinfo", "r");
@@ -109,12 +110,37 @@ void GPU() {
 
     pclose(gpuinfo);
 }
+void user() {
+    char *username = getenv("USER");
+    if (username != NULL) {
+        printf("User: %s\n", username);
+    } else {
+        printf("User: unknown\n");
+    }
+}
+
+void shell() {
+    char *shell = getenv("SHELL");
+    if (shell != NULL) {
+        char *shellname = strrchr(shell, '/');
+        if (shellname != NULL) {
+            shellname++; 
+        } else {
+            shellname = shell; 
+        }
+        printf("Shell: %s\n", shellname);
+    } else {
+        printf("Shell: unknown\n");
+    }
+}
 
 int main() {
     CPUF();
     ram();
     GPU();
     distro();
+    user();
+    shell();
     uptime();
     return 0;
 }
