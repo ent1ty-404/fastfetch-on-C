@@ -145,9 +145,9 @@ void WM() {
         } else {
             WMNAME = WM; 
         }
-        printf(ARCH_BLUE "WM: " RESET "%s\n", WMNAME);
+        printf(ARCH_BLUE "WM/DE: " RESET "%s\n", WMNAME);
     } else {
-        printf(ARCH_BLUE "WM: " RESET "unknown\n");
+        printf(ARCH_BLUE "WM/DE: " RESET "unknown\n");
     }
 }
 
