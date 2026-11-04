@@ -29,7 +29,7 @@
 *   🐧 **Distro**: Название дистрибутива Linux (из `/etc/os-release`).
 *   👤 **User**: Имя текущего пользователя (переменная окружения `USER`).
 *   🐚 **Shell**: Текущая оболочка (переменная окружения `SHELL`).
-*   🖥️ **WM**: Оконный менеджер (переменная окружения `XDG_CURRENT_DESKTOP`).
+*   🖥️ **WM/DE**: Оконный менеджер (переменная окружения `XDG_CURRENT_DESKTOP`).
 *   📺 **Monitor**: Модель монитора и его разрешение/частота (через `hyprctl monitors`).
 *   💽 **Disk (/)**: Информация о корневом разделе (через `statvfs`).
 *   💾 **EFI**: Информация о загрузочном EFI-разделе (через `statvfs`).
@@ -49,7 +49,7 @@ User: arch-enti
 Shell: fish
 Disk(/): 166.77 GiB / 467.91 GiB (36%)
 EFI: 152.87 MiB / 487.00 MiB (31%)
-WM: Hyprland
+WM/DE: Hyprland
 Monitor: Xiaomi Corporation P27FBB-RGGL 5275600000663
 Mode: 1920x1080@165.00200
 Kernel: 7.2.11-arch1-1
